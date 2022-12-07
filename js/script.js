@@ -227,7 +227,8 @@ function generateAuthors() {
     console.log(articleAuthor);
 
     /* insert HTML of all the links into the authors wrapper */
-    authorsWrapper.innerHTML = html;
+    authorsWrapper.innerHTML ='<a href="#author-' + articleAuthor + '">' + articleAuthor + '</a>';
+    
 
   /* END LOOP: for every article: */
   }
