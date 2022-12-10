@@ -164,8 +164,6 @@ function generateTags(){
     for(let tag of articleTagsArray) {
 
       /* [DONE] generate HTML of the link */
-      //const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
-
       const linkHTMLData = {id: tag, title: tag };
       const linkHTML = templates.tagLink(linkHTMLData);
 
@@ -204,7 +202,6 @@ function generateTags(){
 
     /* [NEW] generate code of a link and add it to allTagsHTML */
     const tagLinkHTML = calculateTagClass(allTags[tag], tagsParams);
-    //allTagsHTML += '<li><a href="#tag-' + tag + '" class="' + tagLinkHTML + '">' + tag + ' ' + '</a></li>';
     allTagsData.tags.push({
       tag: tag,
       count: allTags[tag],
@@ -337,8 +334,6 @@ function generateAuthors() {
   /* [new] start loop: for each author in allAuthors */
   for(let articleAuthor in allAuthors){
     /* [new] generate code of a link and add it to allAuthorsHTML */
-    //allAuthorsHTML += '<li><a href="#author-' + articleAuthor + '" class="' +  (' + allAuthors[articleAuthor] + ') + '">' + articleAuthor + '(' + allAuthors[articleAuthor] + ') ' + '</a></li>';
-
     allAuthorsData.authors.push({
       articleAuthor: articleAuthor,
       count: allAuthors[articleAuthor],
